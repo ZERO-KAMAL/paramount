@@ -23,7 +23,6 @@
 
 <body>
 
-
   <!--header-->
   <header class="main-header clearfix" role="header">
     <div class="logo">
@@ -40,6 +39,7 @@
       </ul>
     </nav>
   </header>
+  <!--header-end-->
 
   <!-- ***** Main Banner Area Start ***** -->
   <section class="section main-banner" id="top" data-section="section1">
@@ -52,9 +52,7 @@
         <h6>Supercharge</h6>
         <h2><em>Your</em> Marketing</h2>
         <div class="main-button">
-          <div class="scroll-to-section">
-            <a href="tel:+1-888-240-1253">Have Questions? Call +1-888-240-1253</a>
-          </div>
+            <a href="tel:1-888-240-1253">Have Questions? Call 1-888-240-1253</a>
         </div>
       </div>
     </div>
@@ -62,6 +60,7 @@
   <!-- ***** Main Banner Area End ***** -->
 
 
+  <!-- feature -->
   <section class="features">
     <div class="container">
       <div class="row">
@@ -108,7 +107,7 @@
                   full service marketing plan to meet your needs.</p>
                 <p class="hidden-sm">For business owners who want to target local search traffic and turn it into
                   customers. We offer a full service marketing plan to meet your needs.</p>
-                <div class="scroll-to-section"><a href="tel:1-888-240-1253">Call 1-888-240-1253</a></div>
+                <a href="tel:1-888-240-1253">Call 1-888-240-1253</a>
               </div>
             </div>
           </div>
@@ -116,7 +115,9 @@
       </div>
     </div>
   </section>
+  <!-- feature-end -->
 
+  <!-- why-us -->
   <section class="section why-us" data-section="section2">
     <div class="container">
       <div class="row">
@@ -175,37 +176,18 @@
       </div>
     </div>
   </section>
+  <!-- why-us-end -->
 
+  <!-- coming-soon -->
   <section class="section coming-soon" data-section="section3">
     <div class="container">
-      <div class="row">
+      <div class="row d-flex align-items-center">
         <div class="col-md-7 col-xs-12">
           <div class="continer centerIt">
             <div>
-              <h4>Request A <em>Free Sample Website </em></h4>
-              <div class="counter">
-
-                <div class="days">
-                  <div class="value">00</div>
-                  <span>Days</span>
-                </div>
-
-                <div class="hours">
-                  <div class="value">00</div>
-                  <span>Hours</span>
-                </div>
-
-                <div class="minutes">
-                  <div class="value">00</div>
-                  <span>Minutes</span>
-                </div>
-
-                <div class="seconds">
-                  <div class="value">00</div>
-                  <span>Seconds</span>
-                </div>
-
-              </div>
+              <h4>To order a free website sample, fill in the form and we will contact you within <em>24 hours. </em>
+              </h4>
+              <p>You can also contact us directly at <a href="mailto:info@paramountweb.ca">info@paramountweb.ca</a></p>
             </div>
           </div>
         </div>
@@ -230,7 +212,7 @@
               <p>
                 <input name="captcha_input" type="text" placeholder=" Enter Captcha Code Above" required="">
               </p>
-              <input name="submit" type="submit" value="Submit">
+              <input name="submit" type="submit" value="Submit" class="submitBtn">
               </p>
             </form>
           </div>
@@ -238,7 +220,9 @@
       </div>
     </div>
   </section>
+  <!-- coming-soon-end -->
 
+  <!-- courses -->
   <section class="section courses" data-section="section4">
     <div class="container-fluid">
       <div class="row">
@@ -281,8 +265,9 @@
     </div>
     </div>
   </section>
+  <!-- courses-end -->
 
-
+  <!-- video -->
   <section class="section video" data-section="section5">
     <div class="container">
       <div class="row">
@@ -309,7 +294,9 @@
       </div>
     </div>
   </section>
+  <!-- video-end -->
 
+  <!-- contact -->
   <section class="section contact" data-section="section6">
     <div class="container">
       <div class="row">
@@ -340,7 +327,7 @@
             <p>
               <input name="captcha_input" type="text" placeholder=" Enter Captcha Code Above" required="">
             </p>
-            <input name="submit" type="submit" value="Submit">
+            <input name="submit" type="submit" value="Submit" class="submitBtn">
             </p>
           </form>
         </div>
@@ -355,7 +342,9 @@
       </div>
     </div>
   </section>
+  <!-- contact-end -->
 
+  <!--footer-->
   <footer>
     <div class="container">
       <div class="row">
@@ -370,6 +359,7 @@
       </div>
     </div>
   </footer>
+  <!--footer-end -->
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
@@ -421,18 +411,18 @@
       });
     };
 
-    // $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
-    //   if ($(e.target).hasClass('external')) {
-    //     return;
-    //   }
-    //   e.preventDefault();
-    //   $('#menu').removeClass('active');
-    //   showSection($(this).attr('href'), true);
-    // });
+    $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
+      if ($(e.target).hasClass('external')) {
+        return;
+      }
+      e.preventDefault();
+      $('#menu').removeClass('active');
+      showSection($(this).attr('href'), true);
+    });
 
-    // $(window).scroll(function () {
-    //   checkSection();
-    // });
+    $(window).scroll(function () {
+      checkSection();
+    });
   </script>
 </body>
 
