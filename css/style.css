@@ -649,6 +649,9 @@ section.coming-soon .continer p {
   section.coming-soon .continer h4 {
     text-align: center;
   }
+  section.coming-soon .continer p {
+    text-align: center;
+  }
 }
 
 section.coming-soon .continer .counter .days,
@@ -794,7 +797,7 @@ section.coming-soon form button {
 }
 
 /* Courses */
-.owl-carousel .owl-stage {
+section.courses .owl-carousel .owl-stage {
   display: flex;
 }
 
@@ -819,7 +822,6 @@ section.courses .item img {
 
 section.courses .item .down-content {
   padding: 30px;
-
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
@@ -834,9 +836,9 @@ section.courses .item .down-content h4 {
   margin-bottom: 20px;
 }
 
-section.courses .item .down-content p {
-  /* margin-bottom: 25px; */
-}
+/* section.courses .item .down-content p {
+  margin-bottom: 25px;
+} */
 
 section.courses .item .down-content img {
   width: 40px;
