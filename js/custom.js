@@ -119,6 +119,10 @@ $(document).ready(function () {
   });
 });
 
+$(".main-menu").on("click", function () {
+  $("#menu").removeClass("active");
+});
+
 ///
 //according to loftblog tut
 // $(".nav li:first").addClass("active");
@@ -153,15 +157,6 @@ $(document).ready(function () {
 //     }
 //   });
 // };
-
-// $(".main-menu, .scroll-to-section").on("click", "a", function (e) {
-//   if ($(e.target).hasClass("external")) {
-//     return;
-//   }
-//   e.preventDefault();
-//   $("#menu").removeClass("active");
-//   showSection($(this).attr("href"), true);
-// });
 
 // $(window).scroll(function () {
 //   checkSection();
