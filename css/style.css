@@ -968,6 +968,7 @@ section.gallery span {
   font-size: 70px;
   position: relative;
   top: -5px;
+  color: rgba(22, 34, 57, 0.95);
 }
 section.gallery .owl-nav button:focus {
   outline: none;
