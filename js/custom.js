@@ -97,51 +97,79 @@
     initializeClock(new Date().getFullYear() + 1 + "/1/1");
   })();
 })(jQuery);
+//gallery
+jQuery(".gallerycarousel").owlCarousel({
+  autoplay: true,
+  rewind: true /* use rewind if you don't want loop */,
+  margin: 20,
+
+  // animateOut: "fadeOut",
+  // animateIn: "fadeIn",
+
+  autoHeight: true,
+  autoplayTimeout: 4000,
+  smartSpeed: 800,
+  nav: true,
+  items: 1,
+  singleItem: true,
+});
+
+//menu
+$(document).ready(function () {
+  $(".main-menu li").on("click", function () {
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active");
+  });
+});
 
 ///
 //according to loftblog tut
-$(".nav li:first").addClass("active");
+// $(".nav li:first").addClass("active");
 
-var showSection = function showSection(section, isAnimate) {
-  var direction = section.replace(/#/, ""),
-    reqSection = $(".section").filter('[data-section="' + direction + '"]'),
-    reqSectionPos = reqSection.offset().top - 0;
+// var showSection = function showSection(section, isAnimate) {
+//   var direction = section.replace(/#/, ""),
+//     reqSection = $(".section").filter('[data-section="' + direction + '"]'),
+//     reqSectionPos = reqSection.offset().top - 0;
 
-  if (isAnimate) {
-    $("body, html").animate(
-      {
-        scrollTop: reqSectionPos,
-      },
-      800
-    );
-  } else {
-    $("body, html").scrollTop(reqSectionPos);
-  }
-};
+//   if (isAnimate) {
+//     $("body, html").animate(
+//       {
+//         scrollTop: reqSectionPos,
+//       },
+//       800
+//     );
+//   } else {
+//     $("body, html").scrollTop(reqSectionPos);
+//   }
+// };
 
-var checkSection = function checkSection() {
-  $(".section").each(function () {
-    var $this = $(this),
-      topEdge = $this.offset().top - 80,
-      bottomEdge = topEdge + $this.height(),
-      wScroll = $(window).scrollTop();
-    if (topEdge < wScroll && bottomEdge > wScroll) {
-      var currentId = $this.data("section"),
-        reqLink = $("a").filter("[href*=\\#" + currentId + "]");
-      reqLink.closest("li").addClass("active").siblings().removeClass("active");
-    }
-  });
-};
+// var checkSection = function checkSection() {
+//   $(".section").each(function () {
+//     var $this = $(this),
+//       topEdge = $this.offset().top - 80,
+//       bottomEdge = topEdge + $this.height(),
+//       wScroll = $(window).scrollTop();
+//     if (topEdge < wScroll && bottomEdge > wScroll) {
+//       var currentId = $this.data("section"),
+//         reqLink = $("a").filter("[href*=\\#" + currentId + "]");
+//       reqLink.closest("li").addClass("active").siblings().removeClass("active");
+//     }
+//   });
+// };
 
-$(".main-menu, .scroll-to-section").on("click", "a", function (e) {
-  if ($(e.target).hasClass("external")) {
-    return;
-  }
-  e.preventDefault();
-  $("#menu").removeClass("active");
-  showSection($(this).attr("href"), true);
-});
+// $(".main-menu, .scroll-to-section").on("click", "a", function (e) {
+//   if ($(e.target).hasClass("external")) {
+//     return;
+//   }
+//   e.preventDefault();
+//   $("#menu").removeClass("active");
+//   showSection($(this).attr("href"), true);
+// });
 
-$(window).scroll(function () {
-  checkSection();
-});
+// $(window).scroll(function () {
+//   checkSection();
+// });
+
+// function myFunction() {
+//   location.replace("pricingPlans.html")
+// }
