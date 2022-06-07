@@ -99,19 +99,15 @@
 })(jQuery);
 //gallery
 jQuery(".gallerycarousel").owlCarousel({
-  autoplay: true,
-  rewind: true /* use rewind if you don't want loop */,
-  margin: 20,
-
-  // animateOut: "fadeOut",
-  // animateIn: "fadeIn",
-
+  // autoplay: true,
+  // autoplayTimeout: 5000,
+  // slideSpeed : 800,
+  dots: false,
   autoHeight: true,
-  autoplayTimeout: 4000,
-  smartSpeed: 800,
   nav: true,
+  loop: true,
   items: 1,
-  singleItem: true,
+  // singleItem: true,
 });
 
 //menu
