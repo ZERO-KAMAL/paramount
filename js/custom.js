@@ -99,9 +99,10 @@
 })(jQuery);
 //gallery
 jQuery(".gallerycarousel").owlCarousel({
-  // autoplay: true,
-  // autoplayTimeout: 5000,
-  // slideSpeed : 800,
+  autoplay: true,
+  autoplayTimeout: 5000,
+  autoplayHoverPause: true,
+  stopOnHover: false,
   dots: false,
   autoHeight: true,
   nav: true,
